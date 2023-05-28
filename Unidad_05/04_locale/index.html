@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <title>Hola, mundo!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="momentjs/moment-with-locales.js"></script>
+</head>
+
+<body>
+  <script>
+
+    // moment.locale('es');
+    // moment.locale('fr');
+    // moment.locale('ja');
+    // moment.locale('ga');
+     moment.locale('he');
+
+    let fechaActual = moment();
+    console.log(fechaActual.format("DD-MM-YY HH:mm"));
+
+    let fechaDesdeString = moment("2020-02-20 19:30:30", "YYYY-MM-DD HH:mm:ss");
+    console.log(fechaActual.format("MMMM Do"));
+    console.log(fechaDesdeString.fromNow());
+
+    let fechaDesdeObjeto = moment({ year: 2010, month: 3, day: 5, hour: 15, minute: 10, second: 3, millisecond: 123 });
+    console.log(fechaDesdeObjeto.format("dddd"));
+    console.log(fechaDesdeObjeto.format("L"));
+    console.log(fechaDesdeObjeto.format("LLLL"));
+
+  </script>
+</body>
+
+</html>

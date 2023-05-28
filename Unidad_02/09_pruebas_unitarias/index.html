@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Pruebas Unitarias</title>
+</head>
+
+<body></body>
+<script>
+
+  //una forma de comprobar el correcto funcionamiento de una unidad de código
+  
+  function generalValorRandom(){
+    
+    let obj = {
+      valor0: [1,2,3],
+      valor1: "un string",
+      valor2: 56,
+      valor3: true
+    }
+
+    let keys = Object.keys(obj);
+    let aleatorio = Math.round(Math.random()*4);
+    return obj[keys[aleatorio]];
+  }
+
+  function prueba(param){
+    if(param){
+      return "resultado"
+    }
+  }
+
+  for(var i = 0; i < 5; i++){
+    let unValor = generalValorRandom();
+    console.assert(typeof unValor === "object", "unValor debe ser tipo object");
+  }
+
+  console.assert(prueba(), "resultado de prueba() no debe ser nulo");
+
+
+</script>
+
+</html>

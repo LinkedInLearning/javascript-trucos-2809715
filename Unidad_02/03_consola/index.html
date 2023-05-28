@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Console</title>
+</head>
+
+<body></body>
+<script>
+
+  console.log("solamente un mensaje");
+
+  console.log("un mensaje con un objeto", { valor1: 123, valor2: 456, valor3: 789 });
+
+  let colores = "background: purple; color: white; display: block;";
+  console.log('%c La petición falló', colores, new Error("un mensaje de error"));
+
+  console.assert(true === false);
+
+  for (var i = 0; i < 10; i++) {
+    console.count("contando");
+  }
+  console.countReset("contando");
+  console.count("contando");
+
+  console.error("un error se ha producido");
+
+  console.log("%c Nivel 1", "font-weight: bold; color: green");
+  console.group();
+  console.log("Nivel 2");
+  console.group();
+  console.log("Nivel 3");
+  console.warn("Contenido en nivel 3");
+  console.groupEnd();
+  console.log("Nivel 2");
+  console.groupEnd();
+  console.log("%c Nivel 1", "font-weight: bold; color: green");
+
+  let gente = [["Natalia", "Corea"], ["Katherinne", "Monge"], ["Gaby", "Ledezma"], ["Amarantha", "Sandoval"]]
+  console.table(gente);
+
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<head>
+  <title>Moment JS</title>
+</head>
+
+<body></body>
+<script src="momentjs/moment-with-locales.js"></script>
+<script src="momentjs/moment-timezone-with-data-10-year-range.js"></script>
+<script>
+
+  moment.locale('es');
+
+  //Moment usa UTC por defecto
+
+  //constructor
+  //Nombres de zonas horarias: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+  let fechaHora1 = moment.tz("May 12th 2020 8PM", "MMM Do YYYY hA", "America/Costa_Rica");
+  let fechaHora1 = moment.tz("May 12th 2020 8PM", "MMM Do YYYY hA", "America/Los_Angeles");
+  console.log(fechaHora.format());
+
+  //Transforma un moment de una zona a otra
+  var a = moment().tz("Asia/Taipei");
+  var b = moment("2020-06-27 11:55").tz("America/Toronto");
+
+  console.log(a.format("DD-MM-YY HH:mm:ss")); 
+  console.log(b.format("DD-MM-YY HH:mm:ss")); 
+
+  console.log(a.utc().format("DD-MM-YY HH:mm:ss")); 
+  console.log(b.utc().format("DD-MM-YY HH:mm:ss")); 
+
+</script>
+
+</html>

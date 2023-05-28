@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Moment JS</title>
+  </head>
+  <body></body>
+  <script src="momentjs/moment-with-locales.js"></script>
+  <script>
+
+    moment.locale('es');
+
+    let fechaActual = moment();
+    console.log(fechaActual.format("DD-MM-YY HH:mm"));
+
+    let fechaDesdeString = moment("2020-02-20 19:30:30", "YYYY-MM-DD HH:mm:ss");
+    console.log(fechaActual.format("MMMM Do"));
+    console.log(fechaDesdeString.fromNow());
+
+    let fechaDesdeDate = moment(new Date());
+    console.log(fechaDesdeDate.format("[Hoy es el día del año número] DDDo"));
+
+    let fechaDesdeTimestamp = moment(1582217734383);
+    console.log(fechaDesdeTimestamp.format("[El día de la semana es ]dddd[ y  del mes es ]Do"));
+
+    let fechaDesdeOtroMoment = moment(fechaActual);
+    console.log(fechaDesdeOtroMoment.format("[El día de la semana es ]dddd[ y  del mes es ]Do"));
+
+    let fechaDesdeObjeto = moment({ year :2010, month :3, day :5, hour :15, minute :10, second :3, millisecond :123});
+    console.log(fechaDesdeObjeto.format("YYYY-MM-DD HH:mm:ss"));
+
+    let fechaDesdeArreglo = moment([2020, 6, 10]);
+    console.log(fechaDesdeArreglo.format("DD-MM-YYYY HH:mm:ss"));
+
+  </script>
+</html>

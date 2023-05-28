@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Console</title>
+</head>
+
+<body></body>
+<script>
+  function prueba() {
+    let variable = 1;
+    for (let i = 0; i < 100000; i++) {
+      variable = Math.random() * 10 * variable;
+    }
+  }
+  console.time();
+  prueba();
+  console.timeEnd();
+// This will produce default: 1.2529296875ms(time taken to execute test function, value may vary).
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Moment JS</title>
+  </head>
+  <body></body>
+  <script src="momentjs/moment-with-locales.js"></script>
+  <script>
+
+    moment.locale('es');
+
+    let fechaActual = moment();
+
+    let fechaDesdeObjeto = moment({ year :2010, month :3, day :5, hour :15, minute :10, second :3, millisecond :123});
+
+    let fechaDesdeArreglo = moment([2020, 6, 10]);
+
+    console.log(`Es ${fechaDesdeObjeto.format("YYYY")} antes que ${fechaActual.format("YYYY")}? ${fechaDesdeObjeto.isBefore(fechaActual)}`);
+
+    console.log(`Es ${fechaDesdeObjeto.format("YYYY")} después que ${fechaActual.format("YYYY")}? ${fechaDesdeObjeto.isAfter(fechaActual)}`);
+
+    console.log(moment('2010-10-20').isBetween('2010-01-01', '2012-01-01', 'year'));
+
+    console.log(moment('2020-02-10').isBetween('2020-02-10', fechaDesdeArreglo, 'day', '[)'));
+
+    console.log(fechaDesdeObjeto.subtract(3, 'hours').format("HH:mm:ss"));
+
+    console.log(fechaDesdeObjeto.add(3, 'days').format("DD-MM-YYYY"));
+
+    console.log(moment().day());
+
+    console.log(moment().add(3, "days").diff(moment(), "hours"));
+
+  </script>
+</html>
