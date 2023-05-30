@@ -2,7 +2,7 @@
 
 Este es el repositorio del curso de LinkedIn Learning `JavaScript: Trucos`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
-![image](https://github.com/LinkedInLearning/javascript-trucos-2809715/assets/71371373/e3f6d00e-dbe4-4cf6-91ac-65c29ccde05d)
+![image](https://github.com/LinkedInLearning/javascript-trucos-2809715/assets/71371373/782711d6-4d65-4658-adbc-a1f5756fa61f)
  
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
